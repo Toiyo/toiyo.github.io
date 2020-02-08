@@ -1,22 +1,15 @@
 let myImage = document.querySelector('img');
-let myHeading = document.querySelector('h1');
 let myButton = document.querySelector('button');
+let cont = 0;
 
 myImage.onclick = function(){
     let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/ceu_azul.jpg'){
-        myImage.setAttribute ('src', 'images/leo_azul.jpeg');
-    } 
-}
-function setUserName(){
-    let myName = prompt('Please enter your name.');
-    if(!myName || myName === null){
-        setUserName();
-    } else {
-    localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozila is cool, ' + myName; 
+    if(cont > 1){
+        alert('já lucrou mlk, pode parar')
     }
-}
-myButton.onclick = function(){
-    setUserName();
+    else{
+        myImage.setAttribute ('src', 'images/leo_azul.jpeg');
+        document.getElementById('mercado_dev').innerHTML = 'Ta voando!';
+        cont++;
+    } 
 }
