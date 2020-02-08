@@ -4,7 +4,7 @@ let cont = 0;
 
 myImage.onclick = function(){
     let mySrc = myImage.getAttribute('src');
-    if(cont > 1){
+    if(cont > 0){
         alert('já lucrou mlk, pode parar')
     }
     else{
